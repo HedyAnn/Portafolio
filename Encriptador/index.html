@@ -11,27 +11,26 @@
     </head>
     <body>
         <div class="contenedor">
+            <img src="img/Logo.png" alt="Logo Alura" class="logo">
             <div class="encriptar">
                 <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
                 <div class="terminos">
                     <p>Sólo letras minúsculas y sin acento</p>
                 </div>
                 <div class="botones">
-                    <button class="boton-en" type="button" onclick="encriptar()">Encriptar</button>
-                    <button class="boton-des" type="button" onclick="desencriptar()">Desencriptar</button>
+                    <input type="button" class="bt-encriptar" value="Encriptar" onclick="encriptar()">
+                    <input type="button" class="bt-desencriptar" value="Desencriptar" onclick="desencriptar()">
                 </div>
             </div>
             <div class="encriptado">
-                <img src="" alt="" id="imagen">
+                <img src="img/Muñeco.png" alt="" id="muñeco">
                 <div class="mensaje-encriptado" id="mensaje-encriptado">
-                    <h2 id="titulo-mensaje">Ningún mensaje encontrado</h2>
-                    <p>Ingresa el texto que quieras encriptar o desencriptar</p>
-                    <textarea name="mensaje" class="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                    <h2 class="titulo-mensaje" id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+                    <p id="parrafo">Ingrese el texto que quieras encriptar o desencriptar</p>
+                    <!--<textarea name="mensaje" class="mensaje" id="mensaje" cols="30" rows="10"></textarea>-->
                 </div>
             </div>
         </div>
     </body>
-    <script src="script.js">
-
-    </script>
+    <script src="index.js"></script>
 </html>
