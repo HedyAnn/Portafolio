@@ -45,3 +45,8 @@ function desencriptar() {
         alert("Debes ingresar un texto");
       }
   }
+
+function copiar() {
+    let texto = document.getElementById("texto").value;
+    navigator.clipboard.writeText(texto);
+}

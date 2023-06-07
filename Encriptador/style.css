@@ -4,6 +4,7 @@
     height: 100vh;
     background: #f3f5fc;
     padding: 10px;
+    display: flex;
 }
 
 .logo {
@@ -13,15 +14,16 @@
     order: 0;
     flex-grow: 0;
     position: relative;
-    top: 20px;
+    top: 40px;
+    left: 84px
 }
 
 .texto {
     position: absolute;
-    width: 40%;
-    height: 60%;
-    top: 15%;
-    left: 13%;
+    width: 400px;
+    height: 48px;
+    top: 168px;
+    left: 240px;
     border: none;
     font-family: "inter";
     font-style: normal;
@@ -29,6 +31,7 @@
     font-weight: 400;
     line-height: 150%;
     background-color: #f3f5fc;
+    color: #0A3871;
 }
 
 .texto::placeholder {
@@ -50,10 +53,9 @@
     align-items: center;
     padding: auto;
     position: absolute;
-    width: 80%;
-    gap: 10px;
-    top: 80%;
-    left: 12%;
+    width: 205px;
+    top: 750px;
+    left: 240px;
 }
 
 .terminos p {
@@ -69,23 +71,51 @@
     order: 1;
 }
 
+.copiar {
+    position: absolute;
+    width: 80%;
+    top: 70%;
+    left: 50%;
+}
+
+.bt-copiar {
+    align-items: center;
+    padding: 2%;
+    justify-content: center;
+    border-radius: 18px;
+    background-color: #ffd024;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "inter";
+    border: 1px solid;
+    text-align: center;
+}
+
+.bt-copiar:hover {
+    background: #ff7f24;
+    transform: scale(0.9);
+    transition: 100ms;
+}
+
 .botones {
     display: flex;
     flex-direction: row;
     align-items:flex-start;
-    padding: 1% 0;
+    padding: 24px 0;
     position: absolute;
-    width: 80%;
-    top: 82%;
-    left: 12%;
+    width: 700px;
+    height: 67px;
+    top: 765px;
+    left: 240px;
+    gap: 10px
 }
 
 .bt-encriptar {
     align-items: center;
     justify-content: center;
     padding: 2%;
-    gap: 10%;
-    width: 25%;
+    width: 300px;
+    height: 67px;
     border-radius: 18px;
     font-size: 18px;
     background-color: #0a4f7d;
@@ -112,8 +142,8 @@
     align-items: center;
     justify-content: center;
     padding: 2%;
-    gap: 10%;
-    width: 25%;
+    width: 300px;
+    height: 67px;
     border-radius: 18px;
     font-size: 18px;
     background-color: #0a4f7d;
@@ -138,14 +168,14 @@
 .encriptado {
     display: flex;
     position: absolute;
-    height: 90%;
+    height: 850px;
     justify-content: center;
-    width: 30%;
-    left: 60%;
-    top: 5%;
+    width: 450px;
+    left: 1200px;
+    top: 40px;
     background: #ffffff;
-    box-shadow: 0px 24px 30px -10px  rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
+    box-shadow: 0px 24px 32px -8px  rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
 }
 
 .mensaje-encriptado {
@@ -212,6 +242,11 @@
     }
     .terminos p {
         font-size: 16px;
+    }
+    .copiar {
+        width: 120%;
+        top: 55%;
+        left: 75%;
     }
     .botones {
         width: 80%;
