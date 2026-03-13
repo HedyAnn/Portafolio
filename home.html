@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1791cf",
+                        "accent-rose": "#f5e1da",
+                        "accent-emerald": "#064e3b",
+                        "background-light": "#fdfcfb",
+                        "background-dark": "#111c21",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfcfb;
+        }
+
+        .editorial-shadow {
+            box-shadow: 0 10px 50px -12px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-slate-900 font-display selection:bg-accent-rose">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Top Navigation -->
+        <header class="fixed top-0 z-50 w-full bg-background-light/80 backdrop-blur-md border-b border-slate-100">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-accent-emerald rounded-full flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined text-sm">signature</span>
+                    </div>
+                    <span class="font-bold tracking-tight text-lg uppercase">Hedy Herrada</span>
+                </div>
+                <nav class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#Sobre mí">Sobre mí</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#Proyectos">Proyectos</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="#Metodología">Metodología</a>
+                    <a href="#Contacto"
+                        class="inline-block bg-accent-rose text-slate-900 px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-opacity-80 transition-all text-center">Contacto</a>
+                </nav>
+            </div>
+        </header>
+        <main class="pt-20">
+            <!-- Hero Section -->
+            <section id="Sobre mí" class="bg-[#f5f1f0] py-16 md:py-32">
+                <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-8">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-emerald/5 text-accent-emerald text-xs font-bold uppercase tracking-widest">
+                            <span class="w-1.5 h-1.5 rounded-full bg-accent-emerald"></span>
+                            Proyectos actuales
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] text-slate-900">
+                            Diseño UX/UI especializada en <span class="text-accent-emerald italic">Business
+                                intelligent.</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-slate-600 max-w-xl leading-relaxed">
+                            Diseñadora UX/UI especialista en estrategia, empatía y diseño de sistemas para ayudar a
+                            escalar negocios y potenciar el bienestar de los usuarios.
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-4">
+                            <a href="#Proyectos"
+                                class="inline-block px-8 py-4 bg-accent-rose text-slate-900 rounded-xl font-bold hover:shadow-lg transition-all text-center">Ver
+                                Proyectos</a>
+                            <a href="#Sobre mí"
+                                class="inline-block px-8 py-4 bg-[#c7d1cc] border border-slate-200 hover:bg-slate-50 rounded-xl font-bold transition-all text-center">Sobre
+                                mí</a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 relative">
+                        <div class="aspect-[4/5] rounded-3xl overflow-hidden editorial-shadow bg-accent-rose/20">
+                            <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                data-alt="etrato profesional de Hedy Herrada, Diseñadora UX/UI"
+                                src="./img/Hedy_H.png" />
+                        </div>
+                        <div
+                            class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl editorial-shadow max-w-[200px] hidden md:block">
+                            <p class="text-xs font-bold uppercase tracking-tighter text-slate-400 mb-1">Ubicada en</p>
+                            <p class="font-semibold text-accent-emerald">Santiago, Chile &amp; Remoto</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Expertise / About Section -->
+            <section class="bg-white py-24">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+                        <div class="lg:col-span-1">
+                            <h2 class="text-3xl font-bold text-slate-900 mb-6">Estrategia, Datos y Experiencia</h2>
+                            <p class="text-slate-600 leading-relaxed">
+                                Transformo la complejidad de los datos en experiencias intuitivas. Conecto los objetivos
+                                de negocio en entornos de Business Intelligence con las necesidades de los usuarios
+                                mediante procesos de diseño que priorizan la claridad y la escalabilidad.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="space-y-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-accent-rose/30 flex items-center justify-center text-accent-emerald">
+                                    <span class="material-symbols-outlined">biotech</span>
+                                </div>
+                                <h3 class="font-bold text-lg">UX Research</h3>
+                                <p class="text-sm text-slate-500 leading-relaxed">DInvestigo comportamientos y patrones
+                                    para transformar datos técnicos en hallazgos accionables y soluciones centradas en
+                                    las personas.</p>
+                            </div>
+                            <div class="space-y-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-accent-rose/30 flex items-center justify-center text-accent-emerald">
+                                    <span class="material-symbols-outlined">account_tree</span>
+                                </div>
+                                <h3 class="font-bold text-lg">Diseño UX/UI</h3>
+                                <p class="text-sm text-slate-500 leading-relaxed">Diseño interfaces funcionales que
+                                    optimizan la visualización de información y facilitan la toma de decisiones
+                                    estratégicas.</p>
+                            </div>
+                            <div class="space-y-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-accent-rose/30 flex items-center justify-center text-accent-emerald">
+                                    <span class="material-symbols-outlined">insights</span>
+                                </div>
+                                <h3 class="font-bold text-lg">Design System</h3>
+                                <p class="text-sm text-slate-500 leading-relaxed">Construyo librerías de componentes
+                                    escalables que agilizan el desarrollo y aseguran la coherencia visual en todo el
+                                    producto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Featured Projects -->
+            <section id="Proyectos" class="py-24 max-w-7xl mx-auto px-6">
+                <div class="flex justify-between items-end mb-12">
+                    <div>
+                        <span class="text-accent-emerald font-bold tracking-widest text-xs uppercase">Portfolio</span>
+                        <h2 class="text-4xl font-bold mt-2">Proyectos</h2>
+                    </div>
+                    <a class="text-sm font-bold border-b-2 border-accent-rose pb-1 hover:text-accent-emerald transition-all"
+                        href="#">Ver todos los proyectos</a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Project 1 -->
+                    <div class="group">
+                        <a href="https://followup.cl/" target="_blank" rel="noopener noreferrer" class="block">
+                            <div
+                                class="aspect-video rounded-3xl overflow-hidden bg-slate-100 mb-6 editorial-shadow transition-transform group-hover:-translate-y-2">
+                                <img class="w-full h-full object-cover"
+                                    alt="Diseño de dashboard para plataforma FollowUp"
+                                    src="./img/dashboards-en-power-bi.png" />
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-slate-100 rounded">
+                                Plataforma BI
+                            </span>
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-accent-rose/40 rounded">
+                                Diseño UX/UI
+                            </span>
+                        </div>
+                        <a href="https://followup.cl/" target="_blank" rel="noopener noreferrer" class="inline-block">
+                            <h3 class="text-2xl font-bold group-hover:text-accent-emerald transition-colors">
+                                Rediseño Plataforma FollowUp
+                            </h3>
+                        </a>
+                        <p class="text-slate-500 mt-2">
+                            Como diseñadora UX/UI enfocada en Business Intelligence, rediseño la plataforma FollowUp y
+                            sus dashboards para transformar datos complejos en experiencias intuitivas y escalables.
+                        </p>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="group">
+                        <a href="https://www.behance.net/gallery/242380291/EAT-Japan-App-movil-Presentacion-UX"
+                            target="_blank" rel="noopener noreferrer" class="block">
+                            <div
+                                class="aspect-video rounded-3xl overflow-hidden bg-slate-100 mb-6 editorial-shadow transition-transform group-hover:-translate-y-2">
+                                <img class="w-full h-full object-cover"
+                                    alt="Interfaz de la app móvil EAT Japan para traducción de ingredientes"
+                                    src="./img/Eatjapan.png" />
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-slate-100 rounded">
+                                App Mobile
+                            </span>
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-accent-rose/40 rounded">
+                                Diseño móvil
+                            </span>
+                        </div>
+                        <a href="https://www.behance.net/gallery/242380291/EAT-Japan-App-movil-Presentacion-UX"
+                            target="_blank" rel="noopener noreferrer" class="inline-block">
+                            <h3 class="text-2xl font-bold group-hover:text-accent-emerald transition-colors">
+                                Diseño app móvil de EAT Japan
+                            </h3>
+                        </a>
+                        <p class="text-slate-500 mt-2">
+                            Lideré el diseño integral de la app móvil EAT Japan, aplicando un proceso de UX Research y
+                            prototipado de alta fidelidad para asistir a viajeros con la traducción de ingredientes.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Methodology -->
+            <section id="Metodología" class="bg-[#a8b3ad] text-white py-24">
+                <div class="max-w-7xl mx-auto px-6">
+                    <h2 class="text-3xl font-bold mb-16 text-center">Metodología</h2>
+                    <div class="relative">
+                        <!-- Connecting Line -->
+                        <div class="hidden md:block absolute top-1/2 left-0 w-full h-px bg-white/20 -translate-y-1/2">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+                            <div class="relative bg-[#a8b3ad] text-center z-10 px-4">
+                                <div
+                                    class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent-emerald mx-auto mb-6">
+                                    <span class="material-symbols-outlined">search</span>
+                                </div>
+                                <h4 class="font-bold mb-2">Estrategia</h4>
+                                <p class="text-s text-white/60">Identifico los objetivos de negocio y las necesidades
+                                    del usuario para alinear el propósito del producto.</p>
+                            </div>
+                            <div class="relative bg-[#a8b3ad] text-center z-10 px-4">
+                                <div
+                                    class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent-emerald mx-auto mb-6">
+                                    <span class="material-symbols-outlined">architecture</span>
+                                </div>
+                                <h4 class="font-bold mb-2">Alcance</h4>
+                                <p class="text-s text-white/60">Defino los requerimientos funcionales y el contenido
+                                    necesario para resolver problemas específicos.</p>
+                            </div>
+                            <div class="relative bg-[#a8b3ad] text-center z-10 px-4">
+                                <div
+                                    class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent-emerald mx-auto mb-6">
+                                    <span class="material-symbols-outlined">draw</span>
+                                </div>
+                                <h4 class="font-bold mb-2">Estructura</h4>
+                                <p class="text-s text-white/60">Diseño la arquitectura de la información y los flujos de
+                                    interacción para organizar los datos de forma lógica.</p>
+                            </div>
+                            <div class="relative bg-[#a8b3ad] text-center z-10 px-4">
+                                <div
+                                    class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent-emerald mx-auto mb-6">
+                                    <span class="material-symbols-outlined">checklist</span>
+                                </div>
+                                <h4 class="font-bold mb-2">Esqueleto</h4>
+                                <p class="text-s text-white/60">Elaboro wireframes y optimizo la jerarquía visual para
+                                    guiar al usuario a través de la interfaz.</p>
+                            </div>
+                            <div class="relative bg-[#a8b3ad] text-center z-10 px-4">
+                                <div
+                                    class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent-emerald mx-auto mb-6">
+                                    <span class="material-symbols-outlined">refresh</span>
+                                </div>
+                                <h4 class="font-bold mb-2">Superficie</h4>
+                                <p class="text-s text-white/60">Aplico el diseño visual final y los componentes del
+                                    sistema, logrando una experiencia pulida y funcional.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Testimonials & Contact -->
+            <section id="Contacto" class="py-24 max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <div class="space-y-8">
+                        <div class="bg-white p-10 rounded-3xl editorial-shadow border border-slate-50 relative">
+                            <span
+                                class="material-symbols-outlined absolute -top-4 left-10 text-6xl text-accent-rose/50">format_quote</span>
+                            <p class="text-xl italic leading-relaxed text-slate-700">
+                                "Hedy es una persona trabajadora, creativa y capaz de idear grandes cosas. En los
+                                proyectos tomaba la iniciativa y se mantenía atenta a lo que se necesitara informar,
+                                hasta la entrega final. Me gusta mucho su capacidad de enfrentarse con resiliencia a los
+                                diferentes desafíos que van apareciendo, sin temor a aprender nuevas habilidades si el
+                                trabajo lo requiere."
+                            </p>
+                            <div class="mt-8 flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+                                    <img class="w-full h-full object-cover" data-alt="Client portrait"
+                                        src="./img/Gabriel.jpg" />
+                                </div>
+                                <div>
+                                    <p class="font-bold">Gabriel Araya</p>
+                                    <p class="text-sm text-slate-500">Ing. Ciberseguridad, Newtenberg.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <h2 class="text-5xl font-bold leading-tight">Hablemos sobre un nuevo proyecto.</h2>
+                        <p class="text-lg text-slate-500">¿Listo para llevar tu producto al siguiente nivel?
+                            Me especializo en Diseño UX/UI aplicado a entornos de BI, creando soluciones donde la
+                            claridad y la estrategia van de la mano. Si quieres conversar sobre una nueva colaboración o
+                            proyecto, mi bandeja de entrada está siempre abierta. ¡Conectemos!</p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a class="flex-1 bg-accent-rose text-black px-8 py-5 rounded-2xl font-bold text-center hover:shadow-xl transition-all"
+                                href="mailto:hello@elenavance.com">
+                                hedy.herrada@gmail.com
+                            </a>
+                            <a class="flex-1 border bg-[#c7d1cc] border-slate-200 px-8 py-5 rounded-2xl font-bold text-center hover:bg-slate-50 transition-all"
+                                href="https://drive.google.com/file/d/1-DDYgQu9QQJLpUMjqIs3R1Mk8kDtkCcj/view?usp=sharing"
+                                target="_blank" rel="noopener noreferrer">Descargar CV</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-background-light border-t border-slate-100 py-12">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+                <p class="text-sm text-slate-400">© 2026 Hedy Herrada. Diseña con sentido.</p>
+                <div class="flex items-center gap-8">
+                    <a class="text-sm font-semibold hover:text-accent-emerald transition-colors"
+                        href="https://www.linkedin.com/in/hedy-herrada-75365b147/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a>
+                    <a class="text-sm font-semibold hover:text-accent-emerald transition-colors"
+                        href="https://www.behance.net/hedyherrada" target="_blank" rel="noopener noreferrer">Behance</a>
+                    <a class="text-sm font-semibold hover:text-accent-emerald transition-colors"
+                        href="https://drive.google.com/file/d/1-DDYgQu9QQJLpUMjqIs3R1Mk8kDtkCcj/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer">Curriculum</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
