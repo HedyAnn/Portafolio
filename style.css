@@ -1,0 +1,12 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fdfcfb;
+}
+
+.editorial-shadow {
+    box-shadow: 0 10px 50px -12px rgba(0, 0, 0, 0.05);
+}
+
+.will-change-transform {
+    will-change: transform;
+}

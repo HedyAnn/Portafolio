@@ -39,16 +39,7 @@
             },
         }
     </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fdfcfb;
-        }
-
-        .editorial-shadow {
-            box-shadow: 0 10px 50px -12px rgba(0, 0, 0, 0.05);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-background-light text-slate-900 font-display selection:bg-accent-rose">
@@ -57,15 +48,15 @@
         <header class="fixed top-0 z-50 w-full bg-background-light/80 backdrop-blur-md border-b border-slate-100">
             <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 bg-accent-emerald rounded-full flex items-center justify-center text-white">
-                        <span class="material-symbols-outlined text-sm">signature</span>
+                    <div class="w-10 h-10 bg-accent-rose rounded-full flex items-center justify-center text-slate-900 shadow-sm border border-black/5 transition-transform hover:scale-110 duration-300">
+                        <span class="font-black text-xl tracking-tighter">H</span>
                     </div>
                     <span class="font-bold tracking-tight text-lg uppercase">Hedy Herrada</span>
                 </div>
                 <nav class="hidden md:flex items-center gap-10">
-                    <a class="text-sm font-medium hover:text-accent-emerald transition-colors" href="#sobre-mi">Sobre mí</a>
-                    <a class="text-sm font-medium hover:text-accent-emerald transition-colors" href="#Proyectos">Proyectos</a>
-                    <a class="text-sm font-medium hover:text-accent-emerald transition-colors"
+                    <a class="text-sm font-medium hover:text-accent-emerald hover:font-bold transition-all" href="#sobre-mi">Sobre mí</a>
+                    <a class="text-sm font-medium hover:text-accent-emerald hover:font-bold transition-all" href="#Proyectos">Proyectos</a>
+                    <a class="text-sm font-medium hover:text-accent-emerald hover:font-bold transition-all"
                         href="#Metodología">Metodología</a>
                     <a href="#Contacto"
                         class="inline-block bg-accent-rose text-slate-900 px-6 py-2.5 rounded-full font-semibold text-sm hover:brightness-95 transition-all text-center">Contacto</a>
@@ -100,7 +91,7 @@
                             <span class="w-1.5 h-1.5 rounded-full bg-accent-emerald"></span>
                             Proyectos actuales
                         </div>
-                        <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] text-slate-900">
+                        <h1 id="parallax-text" class="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] text-slate-900 will-change-transform">
                             Diseño UX/UI especializada en <span class="text-accent-emerald italic">Business
                                 Intelligence.</span>
                         </h1>
@@ -118,13 +109,13 @@
                         </div>
                     </div>
                     <div class="lg:col-span-5 relative">
-                        <div class="aspect-[4/5] rounded-3xl overflow-hidden editorial-shadow bg-accent-rose/20">
-                            <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                        <div class="aspect-[4/5] rounded-3xl overflow-hidden editorial-shadow bg-accent-rose/20 will-change-transform">
+                            <img id="parallax-img" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-110"
                                 alt="Retrato profesional de Hedy Herrada, Diseñadora UX/UI" loading="lazy"
                                 src="./img/Hedy_H.png" />
                         </div>
-                        <div
-                            class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl editorial-shadow max-w-[200px] hidden md:block">
+                        <div id="parallax-badge"
+                            class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl editorial-shadow max-w-[200px] hidden md:block will-change-transform">
                             <p class="text-xs font-bold uppercase tracking-tighter text-slate-400 mb-1">Ubicada en</p>
                             <p class="font-semibold text-accent-emerald">Santiago, Chile &amp; Remoto</p>
                         </div>
@@ -179,82 +170,84 @@
                 </div>
             </section>
             <!-- Featured Projects -->
-            <section id="Proyectos" class="py-24 max-w-7xl mx-auto px-6">
-                <div class="flex justify-between items-end mb-12">
-                    <div>
-                        <span class="text-accent-emerald font-bold tracking-widest text-xs uppercase">Portfolio</span>
-                        <h2 class="text-4xl font-bold mt-2">Proyectos</h2>
-                    </div>
-                    <a class="text-sm font-bold border-b-2 border-accent-rose pb-1 hover:text-accent-emerald transition-all"
-                        href="#">Ver todos los proyectos</a>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <!-- Project 1 -->
-                    <div class="group">
-                        <a href="https://www.followupcx.com/" target="_blank" rel="noopener noreferrer" class="block">
-                            <div
-                                class="aspect-video rounded-3xl overflow-hidden bg-slate-100 mb-6 editorial-shadow transition-transform group-hover:-translate-y-2">
-                                <img class="w-full h-full object-cover" loading="lazy"
-                                    alt="Diseño de dashboard para plataforma FollowUp"
-                                    src="./img/dashboards-en-power-bi.png" />
-                            </div>
-                        </a>
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-slate-100 rounded">
-                                Plataforma BI
-                            </span>
-                            <span
-                                class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-accent-rose/40 rounded">
-                                Diseño UX/UI
-                            </span>
+            <section id="Proyectos" class="bg-accent-rose/30 py-24">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="flex justify-between items-end mb-12">
+                        <div>
+                            <span class="text-accent-emerald font-bold tracking-widest text-xs uppercase">Portfolio</span>
+                            <h2 class="text-4xl font-bold mt-2">Proyectos</h2>
                         </div>
-                        <a href="https://www.followupcx.com/" target="_blank" rel="noopener noreferrer" class="inline-block">
-                            <h3 class="text-2xl font-bold group-hover:text-accent-emerald transition-colors">
-                                Rediseño Plataforma FollowUp
-                            </h3>
-                        </a>
-                        <p class="text-slate-500 mt-2">
-                            Como diseñadora UX/UI enfocada en Business Intelligence, rediseño la plataforma FollowUp y
-                            sus dashboards para transformar datos complejos en experiencias intuitivas y escalables.
-                        </p>
+                        <a class="text-sm font-bold border-b-2 border-accent-rose pb-1 hover:text-accent-emerald transition-all"
+                            href="#">Ver todos los proyectos</a>
                     </div>
-                    <!-- Project 2 -->
-                    <div class="group">
-                        <a href="https://www.behance.net/gallery/242380291/EAT-Japan-App-movil-Presentacion-UX"
-                            target="_blank" rel="noopener noreferrer" class="block">
-                            <div
-                                class="aspect-video rounded-3xl overflow-hidden bg-slate-100 mb-6 editorial-shadow transition-transform group-hover:-translate-y-2">
-                                <img class="w-full h-full object-cover" loading="lazy"
-                                    alt="Interfaz de la app móvil EAT Japan para traducción de ingredientes"
-                                    src="./img/Eatjapan.png" />
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <!-- Project 1 -->
+                        <div class="group">
+                            <a href="https://www.followupcx.com/" target="_blank" rel="noopener noreferrer" class="block">
+                                <div
+                                    class="aspect-video rounded-3xl overflow-hidden bg-slate-100 mb-6 editorial-shadow transition-transform group-hover:-translate-y-2">
+                                    <img class="w-full h-full object-cover" loading="lazy"
+                                        alt="Diseño de dashboard para plataforma FollowUp"
+                                        src="./img/dashboards-en-power-bi.png" />
+                                </div>
+                            </a>
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-slate-100 rounded">
+                                    Plataforma BI
+                                </span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-accent-rose/40 rounded">
+                                    Diseño UX/UI
+                                </span>
                             </div>
-                        </a>
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-slate-100 rounded">
-                                App Mobile
-                            </span>
-                            <span
-                                class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-accent-rose/40 rounded">
-                                Diseño móvil
-                            </span>
+                            <a href="https://www.followupcx.com/" target="_blank" rel="noopener noreferrer" class="inline-block">
+                                <h3 class="text-2xl font-bold group-hover:text-accent-emerald transition-colors">
+                                    Rediseño Plataforma FollowUp
+                                </h3>
+                            </a>
+                            <p class="text-slate-500 mt-2">
+                                Como diseñadora UX/UI enfocada en Business Intelligence, rediseño la plataforma FollowUp y
+                                sus dashboards para transformar datos complejos en experiencias intuitivas y escalables.
+                            </p>
                         </div>
-                        <a href="https://www.behance.net/gallery/242380291/EAT-Japan-App-movil-Presentacion-UX"
-                            target="_blank" rel="noopener noreferrer" class="inline-block">
-                            <h3 class="text-2xl font-bold group-hover:text-accent-emerald transition-colors">
-                                Diseño app móvil de EAT Japan
-                            </h3>
-                        </a>
-                        <p class="text-slate-500 mt-2">
-                            Lideré el diseño integral de la app móvil EAT Japan, aplicando un proceso de UX Research y
-                            prototipado de alta fidelidad para asistir a viajeros con la traducción de ingredientes.
-                        </p>
+                        <!-- Project 2 -->
+                        <div class="group">
+                            <a href="https://www.behance.net/gallery/242380291/EAT-Japan-App-movil-Presentacion-UX"
+                                target="_blank" rel="noopener noreferrer" class="block">
+                                <div
+                                    class="aspect-video rounded-3xl overflow-hidden bg-slate-100 mb-6 editorial-shadow transition-transform group-hover:-translate-y-2">
+                                    <img class="w-full h-full object-cover" loading="lazy"
+                                        alt="Interfaz de la app móvil EAT Japan para traducción de ingredientes"
+                                        src="./img/Eatjapan.png" />
+                                </div>
+                            </a>
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-slate-100 rounded">
+                                    App Mobile
+                                </span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-accent-rose/40 rounded">
+                                    Diseño móvil
+                                </span>
+                            </div>
+                            <a href="https://www.behance.net/gallery/242380291/EAT-Japan-App-movil-Presentacion-UX"
+                                target="_blank" rel="noopener noreferrer" class="inline-block">
+                                <h3 class="text-2xl font-bold group-hover:text-accent-emerald transition-colors">
+                                    Diseño app móvil de EAT Japan
+                                </h3>
+                            </a>
+                            <p class="text-slate-500 mt-2">
+                                Lideré el diseño integral de la app móvil EAT Japan, aplicando un proceso de UX Research y
+                                prototipado de alta fidelidad para asistir a viajeros con la traducción de ingredientes.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
             <!-- Methodology -->
             <section id="Metodología" class="bg-accent-sage-dark text-white py-24">
                 <div class="max-w-7xl mx-auto px-6">
-                    <h2 class="text-3xl font-bold mb-16 text-center">Metodología</h2>
+                    <h2 class="text-4xl font-bold mb-16 text-center">Metodología</h2>
                     <div class="relative">
                         <!-- Connecting Line -->
                         <div class="hidden md:block absolute top-1/2 left-0 w-full h-px bg-white/20 -translate-y-1/2">
@@ -310,45 +303,47 @@
                 </div>
             </section>
             <!-- Testimonials & Contact -->
-            <section id="Contacto" class="py-24 max-w-7xl mx-auto px-6">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                    <div class="space-y-8">
-                        <div class="bg-white p-10 rounded-3xl editorial-shadow border border-slate-50 relative">
-                            <span
-                                class="material-symbols-outlined absolute -top-4 left-10 text-6xl text-accent-rose/50">format_quote</span>
-                            <p class="text-xl italic leading-relaxed text-slate-700">
-                                "Hedy es una persona trabajadora, creativa y capaz de idear grandes cosas. En los
-                                proyectos tomaba la iniciativa y se mantenía atenta a lo que se necesitara informar,
-                                hasta la entrega final. Me gusta mucho su capacidad de enfrentarse con resiliencia a los
-                                diferentes desafíos que van apareciendo, sin temor a aprender nuevas habilidades si el
-                                trabajo lo requiere."
-                            </p>
-                            <div class="mt-8 flex items-center gap-4">
-                                <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
-                                    <img class="w-full h-full object-cover" alt="Retrato de Gabriel Araya"
-                                        src="./img/Gabriel.jpg" />
-                                </div>
-                                <div>
-                                    <p class="font-bold">Gabriel Araya</p>
-                                    <p class="text-sm text-slate-500">Ing. Ciberseguridad, Newtenberg.</p>
+            <section id="Contacto" class="bg-accent-rose/30 py-24">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                        <div class="space-y-8">
+                            <div class="bg-white p-10 rounded-3xl editorial-shadow border border-slate-50 relative">
+                                <span
+                                    class="material-symbols-outlined absolute -top-4 left-10 text-6xl text-accent-rose/50">format_quote</span>
+                                <p class="text-xl italic leading-relaxed text-slate-700">
+                                    "Hedy es una persona trabajadora, creativa y capaz de idear grandes cosas. En los
+                                    proyectos tomaba la iniciativa y se mantenía atenta a lo que se necesitara informar,
+                                     hasta la entrega final. Me gusta mucho su capacidad de enfrentarse con resiliencia a los
+                                    diferentes desafíos que van apareciendo, sin temor a aprender nuevas habilidades si el
+                                    trabajo lo requiere."
+                                </p>
+                                <div class="mt-8 flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+                                        <img class="w-full h-full object-cover" alt="Retrato de Gabriel Araya"
+                                            src="./img/Gabriel.jpg" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold">Gabriel Araya</p>
+                                        <p class="text-sm text-slate-500">Ing. Ciberseguridad, Newtenberg.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="space-y-8">
-                        <h2 class="text-5xl font-bold leading-tight">Hablemos sobre un nuevo proyecto.</h2>
-                        <p class="text-lg text-slate-500">¿Listo para llevar tu producto al siguiente nivel?
-                            Me especializo en Diseño UX/UI aplicado a entornos de BI, creando soluciones donde la
-                            claridad y la estrategia van de la mano. Si quieres conversar sobre una nueva colaboración o
-                            proyecto, mi bandeja de entrada está siempre abierta. ¡Conectemos!</p>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a class="flex-1 bg-accent-rose text-black px-8 py-5 rounded-2xl font-bold text-center hover:brightness-95 hover:shadow-xl transition-all"
-                                href="mailto:hedy.herrada@gmail.com">
-                                hedy.herrada@gmail.com
-                            </a>
-                            <a class="flex-1 border bg-accent-sage border-slate-200 px-8 py-5 rounded-2xl font-bold text-center hover:brightness-95 transition-all"
-                                href="https://drive.google.com/file/d/1-DDYgQu9QQJLpUMjqIs3R1Mk8kDtkCcj/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer">Descargar CV</a>
+                        <div class="space-y-8">
+                            <h2 class="text-5xl font-bold leading-tight">Hablemos sobre un nuevo proyecto.</h2>
+                            <p class="text-lg text-slate-500">¿Listo para llevar tu producto al siguiente nivel?
+                                Me especializo en Diseño UX/UI aplicado a entornos de BI, creando soluciones donde la
+                                claridad y la estrategia van de la mano. Si quieres conversar sobre una nueva colaboración o
+                                proyecto, mi bandeja de entrada está siempre abierta. ¡Conectemos!</p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a class="flex-1 bg-accent-rose text-black px-8 py-5 rounded-2xl font-bold text-center hover:brightness-95 hover:shadow-xl transition-all"
+                                    href="mailto:hedy.herrada@gmail.com">
+                                    hedy.herrada@gmail.com
+                                </a>
+                                <a class="flex-1 border bg-accent-sage border-slate-200 px-8 py-5 rounded-2xl font-bold text-center hover:brightness-95 transition-all"
+                                    href="https://drive.google.com/file/d/1-DDYgQu9QQJLpUMjqIs3R1Mk8kDtkCcj/view?usp=sharing"
+                                    target="_blank" rel="noopener noreferrer">Descargar CV</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -377,12 +372,29 @@
         const btnCerrar = document.getElementById('btn-cerrar');
         const menuMovil = document.getElementById('menu-movil');
         const links = menuMovil.querySelectorAll('a');
-
         const toggleMenu = () => menuMovil.classList.toggle('translate-x-full');
-
         btnAbrir.addEventListener('click', toggleMenu);
         btnCerrar.addEventListener('click', toggleMenu);
         links.forEach(link => link.addEventListener('click', toggleMenu));
+
+        // Lógica de Parallax Sutil
+        const parallaxImg = document.getElementById('parallax-img');
+        const parallaxBadge = document.getElementById('parallax-badge');
+        const parallaxText = document.getElementById('parallax-text');
+
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            
+            // Solo ejecutamos si estamos cerca del tope para ahorrar recursos
+            if (scrolled < 800) {
+                // La imagen baja lentamente
+                parallaxImg.style.transform = `translateY(${scrolled * 0.05}px)`;
+                // El badge sube un poco más rápido
+                parallaxBadge.style.transform = `translateY(${scrolled * -0.12}px)`;
+                // El texto sube a una velocidad intermedia para crear profundidad
+                parallaxText.style.transform = `translateY(${scrolled * -0.07}px)`;
+            }
+        });
     </script>
 </body>
 
